@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double recebaReal() {
+double obtenhaReal() {
   cout << "Informe um número real: " << endl;
 
   double n;
@@ -16,7 +16,7 @@ int main() {
 
   double maximo = 0;
   for (int i = 0; i < quantidadeDeNumeros; i++) {
-    double x = recebaReal();
+    double x = obtenhaReal();
 
     if (x > maximo) {
       maximo = x;

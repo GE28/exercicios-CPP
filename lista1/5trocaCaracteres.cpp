@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char recebaCaractere() {
+char obtenhaCaractere() {
   cout << "Digite um caractere válido: " << endl;
 
   char c;
@@ -14,9 +14,9 @@ void imprimaCaractere(char a, char b, char c) {
 }
 
 int main() {
-  char car1 = recebaCaractere();
-  char car2 = recebaCaractere();
-  char car3 = recebaCaractere();
+  char car1 = obtenhaCaractere();
+  char car2 = obtenhaCaractere();
+  char car3 = obtenhaCaractere();
   imprimaCaractere(car1, car2, car3);
 
   char car1Original = car1;

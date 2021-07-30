@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double recebaReal() {
+double obtenhaReal() {
   cout << "Informe um número real: " << endl;
 
   double n;
@@ -10,9 +10,9 @@ double recebaReal() {
 }
 
 int main() {
-  double x = recebaReal();
-  double y = recebaReal();
-  double z = recebaReal();
+  double x = obtenhaReal();
+  double y = obtenhaReal();
+  double z = obtenhaReal();
 
   cout << "O maior número informado foi ";
 

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char recebaCaractere() {
+char obtenhaCaractere() {
 
   char c;
   cin >> c;
@@ -10,12 +10,12 @@ char recebaCaractere() {
 
 int main() {
   cout << "Não digita \"s\" >:(" << endl;
-  char diferenteDeS = recebaCaractere();
+  char diferenteDeS = obtenhaCaractere();
 
   while (diferenteDeS != 's') {
     cout << "Isso mesmo, um \"" << diferenteDeS
          << "\", do jeito que eu gosto >:)" << endl;
-    diferenteDeS = recebaCaractere();
+    diferenteDeS = obtenhaCaractere();
   }
 
   cout << "...COMO VOCÊ OUSA?" << endl;

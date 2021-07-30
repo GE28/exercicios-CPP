@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double recebaResistencia() {
+double obtenhaResistencia() {
   cout << "Digite o valor da resistencia: " << endl;
 
   double n;
@@ -18,9 +18,9 @@ double calculeResistenciaParalelo(double r1, double r2, double r3) {
 }
 
 int main() {
-  double r1 = recebaResistencia();
-  double r2 = recebaResistencia();
-  double r3 = recebaResistencia();
+  double r1 = obtenhaResistencia();
+  double r2 = obtenhaResistencia();
+  double r3 = obtenhaResistencia();
 
   cout << "As resistências estão em série (0) ou em paralelo (1) ?" << endl;
   bool paralelo;

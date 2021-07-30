@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double recebaReal() {
+double obtenhaReal() {
   cout << "Informe um número real: " << endl;
 
   double n;
@@ -16,7 +16,7 @@ int main() {
 
   double soma = 0, produto = 1;
   for (int i = 0; i < quantidadeDeNumeros; i++) {
-    double x = recebaReal();
+    double x = obtenhaReal();
 
     soma += x;    // soma = soma + soma
     produto *= x; // produto = produto * produto

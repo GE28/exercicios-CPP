@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-double recebaReal() {
+double obtenhaReal() {
   cout << "Digite um número real: " << endl;
 
   double n;
@@ -13,7 +13,7 @@ int main() {
   int quantidadeDeNumeros = 0;
   double x = 1, soma = 0, produto = 1;
 
-  x = recebaReal();
+  x = obtenhaReal();
   while (x != 0) {
     quantidadeDeNumeros++;
 
@@ -25,7 +25,7 @@ int main() {
     cout << "A média dos números informados é: " << (soma / quantidadeDeNumeros)
          << endl;
 
-    x = recebaReal();
+    x = obtenhaReal();
   }
 
   return 0;
