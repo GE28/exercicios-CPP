@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
+typedef unsigned long ulong;
+
 long calculeFatorial(int x) {
   int contador = x;
-  long resultado = 1;
+  ulong resultado = 1;
 
   while (contador > 1) {
     resultado *= contador--;

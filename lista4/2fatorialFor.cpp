@@ -1,8 +1,11 @@
 #include <iostream>
 using namespace std;
 
+typedef unsigned long ulong;
+
 int main() {
-  int n, fat;
+  int n;
+  ulong fat;
 
   cout << "Informe um número para saber o seu fatorial" << endl;
   cin >> n;
