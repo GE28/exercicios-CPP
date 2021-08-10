@@ -12,8 +12,9 @@ double conteNotas(double quantia, double valorNota) {
   const double restante = quantia - valorNota * quantidade;
 
   if (quantidade > 0) {
-    cout << quantidade << " notas de " << valorNota << " reais" << endl;
+    cout << quantidade << " nota(s) de " << valorNota << " reais" << endl;
   }
+
   if (restante == 0) {
     exit(0);
   }
@@ -26,9 +27,10 @@ double conteMoedas(double quantia, double valorMoeda) {
   const double restante = quantia - valorMoeda * quantidade;
 
   if (quantidade > 0) {
-    cout << quantidade << " notas de " << valorMoeda * 100 << " centavo(s)"
+    cout << quantidade << " moeda(s) de " << valorMoeda * 100 << " centavo(s)"
          << endl;
   }
+
   if (restante == 0) {
     exit(0);
   }
