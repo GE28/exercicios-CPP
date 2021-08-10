@@ -2,7 +2,6 @@
 using namespace std;
 
 char obtenhaCaractere() {
-
   char c;
   cin >> c;
   return c;
