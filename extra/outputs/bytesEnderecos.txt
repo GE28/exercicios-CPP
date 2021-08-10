@@ -1,0 +1,60 @@
+valor: 0, endereço: 0x7ffc114d79b0
+valor: 0, endereço: 0x7ffc114d79b2
+valor: 0, endereço: 0x7ffc114d79b4
+valor: 0, endereço: 0x7ffc114d79b6
+valor: 0, endereço: 0x7ffc114d79b8
+valor: 0, endereço: 0x7ffc114d79ba
+valor: 0, endereço: 0x7ffc114d79bc
+valor: 0, endereço: 0x7ffc114d79be
+valor: 0, endereço: 0x7ffc114d79c0
+valor: 0, endereço: 0x7ffc114d79c2
+cada valor do tipo s ocupa 2 bytes em memória
+
+valor: 0, endereço: 0x7ffc114d79a0
+valor: 0, endereço: 0x7ffc114d79a4
+valor: 0, endereço: 0x7ffc114d79a8
+valor: 0, endereço: 0x7ffc114d79ac
+valor: 0, endereço: 0x7ffc114d79b0
+valor: 0, endereço: 0x7ffc114d79b4
+valor: 0, endereço: 0x7ffc114d79b8
+valor: 0, endereço: 0x7ffc114d79bc
+valor: 0, endereço: 0x7ffc114d79c0
+valor: 0, endereço: 0x7ffc114d79c4
+cada valor do tipo i ocupa 4 bytes em memória
+
+valor: 0, endereço: 0x7ffc114d79a0
+valor: 0, endereço: 0x7ffc114d79a4
+valor: 0, endereço: 0x7ffc114d79a8
+valor: 0, endereço: 0x7ffc114d79ac
+valor: 0, endereço: 0x7ffc114d79b0
+valor: 0, endereço: 0x7ffc114d79b4
+valor: 0, endereço: 0x7ffc114d79b8
+valor: 0, endereço: 0x7ffc114d79bc
+valor: 0, endereço: 0x7ffc114d79c0
+valor: 0, endereço: 0x7ffc114d79c4
+cada valor do tipo f ocupa 4 bytes em memória
+
+valor: 0, endereço: 0x7ffc114d7970
+valor: 0, endereço: 0x7ffc114d7978
+valor: 0, endereço: 0x7ffc114d7980
+valor: 0, endereço: 0x7ffc114d7988
+valor: 0, endereço: 0x7ffc114d7990
+valor: 0, endereço: 0x7ffc114d7998
+valor: 0, endereço: 0x7ffc114d79a0
+valor: 0, endereço: 0x7ffc114d79a8
+valor: 0, endereço: 0x7ffc114d79b0
+valor: 0, endereço: 0x7ffc114d79b8
+cada valor do tipo l ocupa 8 bytes em memória
+
+valor: 0, endereço: 0x7ffc114d7970
+valor: 0, endereço: 0x7ffc114d7978
+valor: 0, endereço: 0x7ffc114d7980
+valor: 0, endereço: 0x7ffc114d7988
+valor: 0, endereço: 0x7ffc114d7990
+valor: 0, endereço: 0x7ffc114d7998
+valor: 0, endereço: 0x7ffc114d79a0
+valor: 0, endereço: 0x7ffc114d79a8
+valor: 0, endereço: 0x7ffc114d79b0
+valor: 0, endereço: 0x7ffc114d79b8
+cada valor do tipo d ocupa 8 bytes em memória
+
