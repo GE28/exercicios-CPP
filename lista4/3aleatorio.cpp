@@ -23,7 +23,7 @@ int main() {
   cout << "Digite um número negativo se quiser parar.";
 
   srand(time(NULL));
-  const int aleatorio = rand() % 100 + 1;
+  const int aleatorio = rand() % 100;
 
   for (tentativas = 0; palpite != aleatorio; ++tentativas) {
     cout << " Tente adivinhar o número (de 0 a 99): ";
