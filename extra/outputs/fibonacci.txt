@@ -1,0 +1,3 @@
+Digite um número inteiro: 
+34
+O termo 34 da sequência de Fibonacci é 5702887
