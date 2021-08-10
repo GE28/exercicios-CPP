@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-long int calculeFatorial(long int x) {
+long calculeFatorial(int x) {
   if (x == 1) {
     return x;
   }
