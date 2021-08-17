@@ -5,7 +5,7 @@ using namespace std;
 
 void leiaVetor(int vetor[]) {
   for (int i = 0; i < TAMANHO; i++) {
-    cout << "Digite um valor inteiro: ";
+    cout << "Informe um valor inteiro: ";
     cin >> vetor[i];
   }
 }
