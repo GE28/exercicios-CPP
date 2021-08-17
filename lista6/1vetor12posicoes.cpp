@@ -16,8 +16,8 @@ ushort obtenhaPosicao() {
   return p;
 }
 
-int leiaVetor(int vetor[], int tam) {
-  for (int i = 0; i < tam; i++) {
+int leiaVetor(int vetor[]) {
+  for (int i = 0; i < TAMANHO; i++) {
     cout << "Informe um valor real: ";
     cin >> vetor[i];
   }
@@ -25,7 +25,7 @@ int leiaVetor(int vetor[], int tam) {
 
 int main() {
   int vetor[TAMANHO], entrada1, entrada2;
-  leiaVetor(vetor, TAMANHO);
+  leiaVetor(vetor);
 
   entrada1 = obtenhaPosicao();
   entrada2 = obtenhaPosicao();
