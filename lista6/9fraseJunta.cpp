@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 void retireEspacos(char vetor[], int tamanho) {
