@@ -16,7 +16,7 @@ ushort obtenhaPosicao() {
   return p;
 }
 
-int leiaVetor(int vetor[]) {
+void leiaVetor(int vetor[]) {
   for (int i = 0; i < TAMANHO; i++) {
     cout << "Informe um valor real: ";
     cin >> vetor[i];
