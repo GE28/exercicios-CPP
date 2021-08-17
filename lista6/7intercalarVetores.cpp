@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-typedef unsigned short ushort;
 
 #define TAMANHO 20
 
@@ -28,7 +27,6 @@ void imprimaVetor(int vetor[]) {
 
 int main() {
   int vetorPar[TAMANHO], vetorImpar[TAMANHO], novoVetor[TAMANHO];
-  short posicao;
 
   leiaVetor(vetorPar);
   leiaVetor(vetorImpar);

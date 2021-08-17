@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-typedef unsigned short ushort;
 
 #define TAMANHO 40
 
