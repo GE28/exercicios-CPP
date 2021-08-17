@@ -12,8 +12,8 @@ int main() {
   cout << "Digite o tempo de rendimento em anos: ";
   cin >> anos;
 
-  double entrada;
   cout << "Inicio : ";
+  double entrada;
   cin >> entrada;
 
   for (short i = 1; i <= anos; i++) {

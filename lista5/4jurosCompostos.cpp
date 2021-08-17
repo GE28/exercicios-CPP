@@ -10,8 +10,8 @@ int main() {
 #define ANOS 10
 #define TAXA 0.05
 
-  double entrada;
   cout << "Inicio : ";
+  double entrada;
   cin >> entrada;
 
   for (short i = 1; i <= ANOS; i++) {
