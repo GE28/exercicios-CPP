@@ -6,7 +6,7 @@ typedef unsigned short ushort;
 
 void leiaVetor(int vetor[]) {
   for (int i = 0; i < TAMANHO; i++) {
-    cout << "Informe um valor real: ";
+    cout << "Informe um valor inteiro: ";
     cin >> vetor[i];
   }
 }

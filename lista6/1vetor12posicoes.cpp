@@ -6,7 +6,7 @@ typedef unsigned short ushort;
 
 ushort obtenhaPosicao() {
   ushort p;
-  cout << "Informe um número (de 1 a 12): ";
+  cout << "Informe um número (de 1 a " << TAMANHO << "): ";
   cin >> p;
 
   if (p > TAMANHO) {
@@ -18,7 +18,7 @@ ushort obtenhaPosicao() {
 
 void leiaVetor(int vetor[]) {
   for (int i = 0; i < TAMANHO; i++) {
-    cout << "Informe um valor real: ";
+    cout << "Informe um valor inteiro: ";
     cin >> vetor[i];
   }
 }
