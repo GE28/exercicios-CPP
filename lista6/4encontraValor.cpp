@@ -12,15 +12,13 @@ void leiaVetor(int vetor[]) {
 }
 
 ushort encontreValor(const int vetor[], int valor) {
-  short posicao = -1;
-
   for (short i = 0; i < TAMANHO; i++) {
     if (vetor[i] == valor) {
-      posicao = i;
+      return i;
     }
   }
 
-  return posicao;
+  return -1;
 }
 
 int main() {
