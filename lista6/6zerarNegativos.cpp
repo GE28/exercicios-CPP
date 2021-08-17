@@ -2,7 +2,7 @@
 using namespace std;
 typedef unsigned short ushort;
 
-#define TAMANHO 5
+#define TAMANHO 40
 
 void leiaVetor(int vetor[]) {
   for (int i = 0; i < TAMANHO; i++) {
