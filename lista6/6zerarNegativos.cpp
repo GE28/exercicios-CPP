@@ -28,8 +28,7 @@ void imprimaVetor(int vetor[]) {
 }
 
 int main() {
-  int vetor[TAMANHO], entrada;
-  short posicao;
+  int vetor[TAMANHO];
 
   leiaVetor(vetor);
   zereNegativos(vetor);

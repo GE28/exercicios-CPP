@@ -23,8 +23,7 @@ int contePares(int vetor[]) {
 }
 
 int main() {
-  int vetor[TAMANHO], entrada;
-  short posicao;
+  int vetor[TAMANHO];
 
   leiaVetor(vetor);
   cout << "Há " << contePares(vetor) << " valor(es) par(es) no vetor lido."
