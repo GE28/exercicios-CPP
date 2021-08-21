@@ -1,4 +1,5 @@
 #include <cmath>
+#include <iomanip>
 #include <iostream>
 using namespace std;
 typedef unsigned int uint;
@@ -6,18 +7,9 @@ typedef unsigned short ushort;
 
 #define TAMANHO 5
 
-void imprimaVetor(ushort vetor[]) {
-  cout << '[' << vetor[0];
-  for (int i = 1; i < TAMANHO - 1; i++) {
-    cout << ", " << vetor[i];
-  }
-  cout << ", " << vetor[TAMANHO - 1] << "]" << endl;
-}
-
 void preenchaVetor(ushort vetor[]) {
-
   uint n;
-  cout << "Informe um número inteiro de até 5 digitos: " << endl;
+  cout << "Informe um número inteiro de até 5 digitos: ";
   cin >> n;
 
   if (n > 99999) {
@@ -31,11 +23,11 @@ void preenchaVetor(ushort vetor[]) {
     n -= digito * casaDecimal;
     vetor[i] = digito;
   }
-
-  imprimaVetor(vetor);
 }
 
 void imprimaExtenso(ushort numero[]) {
+  setiosflags(ios::uppercase);
+
   switch (numero[4]) {
   case 2:
     cout << "vinte";
@@ -102,9 +94,6 @@ void imprimaExtenso(ushort numero[]) {
     }
 
     switch (numero[3]) {
-    case 1:
-      cout << "mil ";
-      break;
     case 2:
       cout << "dois ";
       break;
@@ -132,14 +121,12 @@ void imprimaExtenso(ushort numero[]) {
     }
   }
 
-  if (numero[4] != 0) {
-    if (numero[3] != 0) {
-      cout << "mil ";
-    }
-  }
+  if (numero[4] != 0 || numero[3] != 0) {
+    cout << "mil ";
 
-  if (numero[2] == 0 && (numero[1] != 0 || numero[0] != 0)) {
-    cout << "e ";
+    if (numero[2] == 0 || (numero[1] == 0 && numero[0] == 0)) {
+      cout << "e ";
+    }
   }
 
   switch (numero[2]) {
@@ -179,7 +166,7 @@ void imprimaExtenso(ushort numero[]) {
     }
   }
 
-  if (numero[2] != 0) {
+  if (numero[2] != 0 && (numero[1] != 0 || numero[0] != 0)) {
     cout << "e ";
   }
 
@@ -278,6 +265,8 @@ void imprimaExtenso(ushort numero[]) {
       break;
     }
   }
+
+  cout << endl;
 }
 
 int main() {
