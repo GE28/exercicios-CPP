@@ -3,7 +3,7 @@ using namespace std;
 
 #define TAMANHO 10
 
-int encontreMaximo(int matriz[][TAMANHO]) {
+void encontreMaximo(int matriz[][TAMANHO]) {
   int maximo = matriz[0][0], x = 1, y = 1;
   for (int i = 0; i < TAMANHO; i++) {
     for (int j = 0; j < TAMANHO; j++) {
@@ -19,8 +19,6 @@ int encontreMaximo(int matriz[][TAMANHO]) {
   cout << ", na linha " << ++y;
   cout << " e coluna ";
   cout << ++x << endl;
-
-  return maximo;
 }
 
 int main() {

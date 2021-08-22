@@ -3,8 +3,7 @@ using namespace std;
 
 #define TAMANHO 5
 
-int preenchaDiagonal(int matriz[][TAMANHO]) {
-  int maximo = matriz[0][0], x = 1, y = 1;
+void preenchaDiagonal(int matriz[][TAMANHO]) {
   for (int i = 0; i < TAMANHO; i++) {
     matriz[i][i] = 1;
   }
