@@ -20,7 +20,7 @@ int main() {
   for (n = 0; n < tamanho; n++) {
     m = 0;
     cout << "{";
-    for (m = 1; m < tamanho - 1; m++) {
+    for (m = 1; m < tamanho; m++) {
       cout << (int)(rand() % max) + min;
       cout << ",";
     }
