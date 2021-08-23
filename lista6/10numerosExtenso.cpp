@@ -1,5 +1,4 @@
 #include <cmath>
-#include <iomanip>
 #include <iostream>
 using namespace std;
 typedef unsigned int uint;
@@ -89,7 +88,7 @@ void imprimaExtenso(ushort numero[]) {
       break;
     }
   } else {
-    if (numero[4] && numero[3]) {
+    if (numero[4] != 0 && numero[3] != 0) {
       cout << " e ";
     }
 
