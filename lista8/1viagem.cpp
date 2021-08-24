@@ -17,7 +17,7 @@ int main() {
                          {210, 160, 0, 10, 0, 0},   {190, 150, 10, 0, 0, 0},
                          {0, 95, 0, 0, 0, 80},      {190, 0, 0, 0, 80, 0}};
 
-  int rota[] = {3, 4, 2, 5, 6, 1, 3, 4, 2, 5, 6, 1};
+  int rota[] = {3, 4, 2, 5, 6, 1};
   int tamanho = *(&rota + 1) - rota;
 
   calculePercurso(distancias, rota, tamanho);
