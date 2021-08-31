@@ -11,10 +11,6 @@ double conteNotas(double quantia, double valorNota) {
     cout << quantidade << " nota(s) de " << valorNota << " reais" << endl;
   }
 
-  if (restante == 0) {
-    exit(0);
-  }
-
   return restante;
 }
 
@@ -25,10 +21,6 @@ double conteMoedas(double quantia, double valorMoeda) {
   if (quantidade > 0) {
     cout << quantidade << " moeda(s) de " << valorMoeda * 100 << " centavo(s)"
          << endl;
-  }
-
-  if (restante == 0) {
-    exit(0);
   }
 
   return restante;
