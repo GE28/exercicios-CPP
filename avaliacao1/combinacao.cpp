@@ -15,6 +15,8 @@ int obterFatorial(int n) {
     resultado = resultado * i;
     i++;
   }
+
+  return resultado;
 }
 
 int combinar(int n, int p) {
