@@ -12,7 +12,7 @@ double conteNotas(double quantia, double valorNota) {
   }
 
   if (restante == 0) {
-    exit(0);
+    return restante;
   }
 
   return restante;
