@@ -9,7 +9,11 @@ using namespace std;
 void verifiquePalindromo(char letras[][TAMANHO]) {
   bool palindromo = true;
   for (int i = 0; i < TAMANHO; i++) {
-    for (int j = i; j < TAMANHO; j++) {
+    for (int j = i + 1; j < TAMANHO; j++) {
+      cout << letras[i][j]
+           << ""
+              " === "
+           << letras[j][i] << endl;
       if (letras[i][j] != letras[j][i]) {
         palindromo = false;
       }
@@ -27,10 +31,8 @@ void verifiquePalindromo(char letras[][TAMANHO]) {
 
 int main() {
   char letras[][TAMANHO] = {
-      {'S', 'A', 'T', 'O', 'R'}, 
-      {'A', 'R', 'E', 'P', 'O'},
-      {'T', 'E', 'N', 'E', 'T'}, 
-      {'O', 'P', 'E', 'R', 'A'},
+      {'S', 'A', 'T', 'O', 'R'}, {'A', 'R', 'E', 'P', 'O'},
+      {'T', 'E', 'N', 'E', 'T'}, {'O', 'P', 'E', 'R', 'A'},
       {'R', 'O', 'T', 'A', 'S'},
   };
 
