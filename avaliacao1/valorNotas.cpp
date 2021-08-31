@@ -4,8 +4,8 @@ using namespace std;
 int conteValor(double quantia, double valorNota) { return quantia / valorNota; }
 
 double conteNotas(double quantia, double valorNota) {
-  const double quantidade = conteValor(quantia, valorNota);
-  const double restante = quantia - valorNota * quantidade;
+  double quantidade = conteValor(quantia, valorNota);
+  double restante = quantia - valorNota * quantidade;
 
   if (quantidade > 0) {
     cout << quantidade << " nota(s) de " << valorNota << " reais" << endl;
@@ -19,8 +19,8 @@ double conteNotas(double quantia, double valorNota) {
 }
 
 double conteMoedas(double quantia, double valorMoeda) {
-  const double quantidade = conteValor(quantia, valorMoeda);
-  const double restante = quantia - valorMoeda * quantidade;
+  double quantidade = conteValor(quantia, valorMoeda);
+  double restante = quantia - valorMoeda * quantidade;
 
   if (quantidade > 0) {
     cout << quantidade << " moeda(s) de " << valorMoeda * 100 << " centavo(s)"
