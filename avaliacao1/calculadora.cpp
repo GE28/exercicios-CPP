@@ -20,17 +20,11 @@ void realizarOperacao(double numero1, double numero2, char tipo) {
          << numero1 / numero2;
     break;
   default:
-    cout << "Operacao invalida! Por favor, execute o programa novamente!";
+    cout << "Operacao invalida! Por favor, execute o programa novamente";
     break;
   }
 
   cout << endl;
-}
-
-double obterValor() {
-  double d;
-  cin >> d;
-  return d;
 }
 
 int main() {
@@ -45,8 +39,8 @@ int main() {
   cin >> tipoOperacao;
 
   cout << "Digite dois números: " << endl;
-  n1 = obterValor();
-  n2 = obterValor();
+  cin >> n1;
+  cin >> n2;
 
   realizarOperacao(n1, n2, tipoOperacao);
   return 0;
