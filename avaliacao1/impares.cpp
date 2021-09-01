@@ -1,12 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int obterValor() {
-  int n;
-  cin >> n;
-  return n;
-}
-
 int obterImpar(int posicao) {
   int impar = 1 + 2 * posicao;
   return impar * impar;
