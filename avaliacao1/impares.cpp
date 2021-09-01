@@ -29,7 +29,7 @@ int main() {
   cout << "Digite a quantidade de ímpares (a partir de 0): " << endl;
   cin >> n;
 
-  resultado = somarImpares(n);
+  resultado = somarImpares(n - 1);
 
   cout << "O resultado é: " << resultado << endl;
   return 0;
