@@ -1,12 +1,6 @@
 #include <iostream>
 using namespace std;
 
-int obterValor() {
-  int n;
-  cin >> n;
-  return n;
-}
-
 int obterFatorial(int n) {
   int resultado = 1;
   int i = 2;
@@ -19,7 +13,7 @@ int obterFatorial(int n) {
   return resultado;
 }
 
-int combinar(int n, int p) {
+int comb(int n, int p) {
   if (p < n) {
     int fatN, fatP, fatNP;
     fatN = obterFatorial(n);
@@ -35,12 +29,12 @@ int combinar(int n, int p) {
 int main() {
   int n, p, fat;
   cout << "Digite o número de elementos: " << endl;
-  n = obterValor();
+  cin >> n;
 
   cout << "Digite o número de posições: " << endl;
-  p = obterValor();
+  cin >> p;
 
-  fat = combinar(n, p);
+  fat = comb(n, p);
   if (fat > 0) {
     cout << "A combinação de " << n << " elementos " << p << " à " << p << " = "
          << fat;
