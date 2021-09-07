@@ -22,7 +22,8 @@ ushort encontreValor(const int vetor[], int valor) {
 }
 
 int main() {
-  int vetor[TAMANHO], entrada;
+  int *vetor = new int[TAMANHO];
+  , entrada;
   short posicao;
 
   leiaVetor(vetor);
@@ -38,5 +39,7 @@ int main() {
   }
 
   cout << endl;
+
+  delete[] vetor;
   return 0;
 }

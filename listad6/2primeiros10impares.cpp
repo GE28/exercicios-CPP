@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 #define TAMANHO 10
-  int vetor[TAMANHO];
+  int *vetor = new int[TAMANHO];
 
   for (int i = 0; i < TAMANHO; i++) {
     vetor[i] = 1 + 2 * i;
@@ -14,5 +14,7 @@ int main() {
     cout << ", " << vetor[i];
   }
   cout << ", " << vetor[TAMANHO - 1] << "]" << endl;
+
+  delete[] vetor;
   return 0;
 }

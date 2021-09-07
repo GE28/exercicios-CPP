@@ -22,10 +22,11 @@ void encontreRepetidos(int valores[]) {
 }
 
 int main() {
-  int vetor[TAMANHO];
+  int *vetor = new int[TAMANHO];
 
   leiaVetor(vetor);
   encontreRepetidos(vetor);
 
+  delete[] vetor;
   return 0;
 }

@@ -26,6 +26,7 @@ bool verifiqueAnagramas(char palavra1[], char palavra2[]) {
 }
 
 int main() {
+  // Alocação dinâmica impossível
   char palavra1[TAMANHO] = "AMOR";
   char palavra2[TAMANHO] = "ROMA";
   bool anagramas = false;

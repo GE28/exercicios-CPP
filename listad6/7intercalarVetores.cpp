@@ -26,12 +26,15 @@ void imprimaVetor(int vetor[]) {
 }
 
 int main() {
-  int vetorPar[TAMANHO], vetorImpar[TAMANHO], novoVetor[TAMANHO];
+  int *vetorPar = new int[TAMANHO], *vetorImpar = new int[TAMANHO],
+      *novoVetor = new int[TAMANHO];
 
   leiaVetor(vetorPar);
   leiaVetor(vetorImpar);
 
   intercaleVetores(vetorPar, vetorImpar, novoVetor);
   imprimaVetor(novoVetor);
+
+  delete[] vetorPar, vetorImpar, novoVetor;
   return 0;
 }

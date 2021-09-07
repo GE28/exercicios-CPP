@@ -27,6 +27,7 @@ void imprimaFrase(char vetor[], int tamanho) {
 }
 
 int main() {
+  // Alocação dinâmica impossível
   char vetor[] = "    BCC      ||CEFET-RJ  ||2021.1!";
   int tamanho = *(&vetor + 1) - vetor;
 

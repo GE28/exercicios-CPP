@@ -22,10 +22,12 @@ int contePares(int vetor[]) {
 }
 
 int main() {
-  int vetor[TAMANHO];
+  int *vetor = new int[TAMANHO];
 
   leiaVetor(vetor);
   cout << "Há " << contePares(vetor) << " valor(es) par(es) no vetor lido."
        << endl;
+
+  delete[] vetor;
   return 0;
 }

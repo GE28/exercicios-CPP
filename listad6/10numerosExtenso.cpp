@@ -20,13 +20,11 @@ void preenchaVetor(ushort vetor[]) {
     ushort digito = (n / casaDecimal);
 
     n -= digito * casaDecimal;
-    vetor[i] = digito;
+    *(vetor + i) = digito;
   }
 }
 
 void imprimaExtenso(ushort numero[]) {
-  setiosflags(ios::uppercase);
-
   switch (numero[4]) {
   case 2:
     cout << "vinte";
@@ -269,9 +267,10 @@ void imprimaExtenso(ushort numero[]) {
 }
 
 int main() {
-  ushort entrada[TAMANHO] = {};
+  ushort *entrada = new ushort[TAMANHO]{};
   preenchaVetor(entrada);
   imprimaExtenso(entrada);
 
+  delete[] entrada;
   return 0;
 }

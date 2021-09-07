@@ -25,10 +25,12 @@ void imprimaVetor(int vetor[]) {
 }
 
 int main() {
-  int vetor[TAMANHO];
+  int *vetor = new int[TAMANHO];
 
   leiaVetor(vetor);
   incrementeVetor(vetor);
   imprimaVetor(vetor);
+
+  delete[] vetor;
   return 0;
 }

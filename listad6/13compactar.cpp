@@ -36,7 +36,7 @@ void compacteVetor(int vetor[]) {
 }
 
 int main() {
-  int vetor[TAMANHO];
+  int *vetor = new int[TAMANHO];
 
   leiaVetor(vetor);
 
@@ -47,5 +47,6 @@ int main() {
   compacteVetor(vetor);
   imprimaVetor(vetor);
 
+  delete[] vetor;
   return 0;
 }

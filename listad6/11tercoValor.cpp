@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define TAMANHO 9
+#define TAMANHO 3
 
 void leiaVetor(double vetor[], int rotulo) {
   for (int i = 0; i < TAMANHO; i++) {
@@ -27,7 +27,8 @@ void imprimaVetor(double vetor[]) {
 }
 
 int main() {
-  double vetor1[TAMANHO], vetor2[TAMANHO], vetor3[TAMANHO];
+  double *vetor1 = new double[TAMANHO], *vetor2 = new double[TAMANHO],
+         *vetor3 = new double[TAMANHO];
 
   leiaVetor(vetor1, 1);
   leiaVetor(vetor2, 2);
@@ -46,5 +47,6 @@ int main() {
   cout << "Vetor 3: ";
   imprimaVetor(vetor3);
 
+  delete[] vetor1, vetor2, vetor3;
   return 0;
 }
