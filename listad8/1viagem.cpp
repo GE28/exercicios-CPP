@@ -2,10 +2,11 @@
 using namespace std;
 
 #define TAMANHO 6
+#define PONTOS 6
 
-void calculePercurso(int distancias[][TAMANHO], int rota[], int pontos) {
+void calculePercurso(int **distancias, int *rota) {
   int percurso = 0;
-  for (int i = 0; i < pontos - 1; i++) {
+  for (int i = 0; i < PONTOS - 1; i++) {
     int origem = rota[i] - 1;
     int destino = rota[i + 1] - 1;
     percurso += distancias[origem][destino];
@@ -15,13 +16,21 @@ void calculePercurso(int distancias[][TAMANHO], int rota[], int pontos) {
 }
 
 int main() {
-  int distancias[][TAMANHO] = {{0, 63, 210, 190, 0, 190}, {63, 0, 160, 150, 95, 0},
-                         {210, 160, 0, 10, 0, 0},   {190, 150, 10, 0, 0, 0},
-                         {0, 95, 0, 0, 0, 80},      {190, 0, 0, 0, 80, 0}};
+  int **distancias = new int *[TAMANHO] {
+    new int[TAMANHO]{0, 63, 210, 190, 0, 190},
+    new int[TAMANHO]{63, 0, 160, 150, 95, 0},
+    new int[TAMANHO]{210, 160, 0, 10, 0, 0},
+    new int[TAMANHO]{190, 150, 10, 0, 0, 0},
+    new int[TAMANHO]{0, 95, 0, 0, 0, 80}, 
+    new int[TAMANHO]{190, 0, 0, 0, 80, 0},
+  };
+  int *rota = new int[PONTOS]{3, 4, 2, 5, 6, 1};
 
-  int rota[] = {3, 4, 2, 5, 6, 1};
-  int pontos = *(&rota + 1) - rota;
+  calculePercurso(distancias, rota);
 
-  calculePercurso(distancias, rota, pontos);
+  for (int i = 0; i < TAMANHO; i++) {
+    delete[] distancias[i];
+  }
+  delete[] distancias, rota;
   return 0;
 }

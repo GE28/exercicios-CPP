@@ -1,10 +1,11 @@
 #include <iostream>
+#include <time.h>
 using namespace std;
 
 #define ALUNOS 100
 #define QUESTOES 10
 
-void distribuaNotas(char provas[ALUNOS][QUESTOES], char gabarito[QUESTOES]) {
+void distribuaNotas(char **provas, char *gabarito) {
   double media = 0;
   for (int a = 0; a < ALUNOS; a++) {
     int nota = 0;
@@ -22,110 +23,22 @@ void distribuaNotas(char provas[ALUNOS][QUESTOES], char gabarito[QUESTOES]) {
 }
 
 int main() {
-  char provas[ALUNOS][QUESTOES] = {
-      {'c', 'c', 'd', 'b', 'd', 'a', 'a', 'c', 'd', 'd'},
-      {'d', 'c', 'c', 'b', 'c', 'a', 'c', 'a', 'b', 'd'},
-      {'b', 'a', 'a', 'a', 'c', 'a', 'd', 'c', 'd', 'd'},
-      {'d', 'c', 'c', 'b', 'd', 'b', 'b', 'd', 'a', 'a'},
-      {'d', 'd', 'd', 'a', 'a', 'a', 'd', 'b', 'b', 'd'},
-      {'b', 'a', 'a', 'b', 'c', 'a', 'a', 'c', 'd', 'a'},
-      {'a', 'd', 'b', 'b', 'c', 'a', 'd', 'b', 'd', 'd'},
-      {'b', 'c', 'c', 'b', 'd', 'a', 'c', 'b', 'c', 'b'},
-      {'a', 'b', 'd', 'b', 'a', 'a', 'a', 'a', 'c', 'd'},
-      {'b', 'c', 'c', 'b', 'c', 'a', 'a', 'a', 'c', 'd'},
-      {'b', 'c', 'd', 'b', 'a', 'a', 'b', 'b', 'b', 'b'},
-      {'b', 'b', 'c', 'a', 'c', 'a', 'c', 'b', 'c', 'c'},
-      {'b', 'c', 'a', 'b', 'a', 'a', 'b', 'c', 'd', 'd'},
-      {'b', 'd', 'b', 'b', 'a', 'a', 'b', 'c', 'd', 'a'},
-      {'c', 'c', 'a', 'b', 'c', 'a', 'b', 'c', 'd', 'd'},
-      {'a', 'c', 'b', 'c', 'd', 'a', 'c', 'd', 'a', 'c'},
-      {'b', 'c', 'd', 'c', 'b', 'a', 'a', 'a', 'b', 'b'},
-      {'b', 'c', 'a', 'c', 'a', 'd', 'c', 'c', 'a', 'c'},
-      {'b', 'c', 'a', 'c', 'd', 'a', 'a', 'd', 'd', 'a'},
-      {'b', 'd', 'd', 'b', 'c', 'd', 'a', 'd', 'a', 'd'},
-      {'a', 'c', 'a', 'b', 'b', 'b', 'c', 'd', 'c', 'c'},
-      {'b', 'c', 'a', 'b', 'd', 'c', 'b', 'c', 'a', 'a'},
-      {'b', 'b', 'c', 'a', 'b', 'b', 'd', 'a', 'c', 'b'},
-      {'a', 'a', 'd', 'a', 'c', 'a', 'a', 'b', 'a', 'b'},
-      {'b', 'b', 'b', 'b', 'd', 'a', 'b', 'b', 'a', 'c'},
-      {'b', 'c', 'a', 'b', 'a', 'a', 'a', 'b', 'a', 'd'},
-      {'b', 'b', 'd', 'b', 'c', 'a', 'a', 'c', 'b', 'c'},
-      {'b', 'd', 'a', 'b', 'a', 'a', 'c', 'c', 'a', 'c'},
-      {'b', 'd', 'c', 'b', 'a', 'a', 'b', 'd', 'd', 'd'},
-      {'a', 'b', 'b', 'b', 'd', 'a', 'b', 'a', 'c', 'd'},
-      {'b', 'c', 'a', 'a', 'c', 'a', 'c', 'b', 'c', 'd'},
-      {'b', 'd', 'd', 'b', 'a', 'a', 'a', 'd', 'c', 'd'},
-      {'b', 'b', 'c', 'd', 'b', 'a', 'c', 'a', 'b', 'b'},
-      {'b', 'c', 'c', 'c', 'b', 'b', 'a', 'a', 'c', 'd'},
-      {'a', 'd', 'a', 'c', 'c', 'a', 'a', 'b', 'b', 'd'},
-      {'b', 'c', 'b', 'b', 'b', 'c', 'c', 'c', 'c', 'a'},
-      {'b', 'a', 'd', 'a', 'a', 'b', 'b', 'c', 'c', 'b'},
-      {'c', 'd', 'a', 'b', 'b', 'c', 'c', 'a', 'c', 'd'},
-      {'b', 'd', 'd', 'b', 'c', 'c', 'a', 'b', 'd', 'a'},
-      {'b', 'd', 'b', 'b', 'c', 'd', 'c', 'd', 'c', 'd'},
-      {'b', 'a', 'a', 'b', 'c', 'a', 'd', 'b', 'b', 'c'},
-      {'c', 'a', 'd', 'b', 'c', 'a', 'd', 'c', 'a', 'd'},
-      {'a', 'a', 'c', 'b', 'c', 'a', 'c', 'a', 'd', 'a'},
-      {'b', 'c', 'c', 'a', 'a', 'a', 'a', 'd', 'a', 'd'},
-      {'b', 'b', 'b', 'b', 'b', 'a', 'b', 'b', 'c', 'c'},
-      {'a', 'a', 'b', 'c', 'a', 'a', 'b', 'b', 'b', 'c'},
-      {'a', 'd', 'a', 'c', 'c', 'a', 'b', 'a', 'c', 'b'},
-      {'c', 'd', 'd', 'c', 'a', 'a', 'c', 'c', 'c', 'b'},
-      {'a', 'a', 'c', 'a', 'd', 'a', 'c', 'a', 'c', 'd'},
-      {'b', 'a', 'b', 'b', 'c', 'b', 'b', 'd', 'a', 'b'},
-      {'a', 'd', 'c', 'a', 'a', 'c', 'd', 'b', 'd', 'd'},
-      {'a', 'c', 'c', 'a', 'c', 'b', 'd', 'a', 'c', 'b'},
-      {'c', 'b', 'd', 'a', 'c', 'a', 'b', 'd', 'b', 'd'},
-      {'b', 'a', 'a', 'b', 'c', 'a', 'a', 'd', 'a', 'b'},
-      {'b', 'b', 'b', 'd', 'd', 'd', 'a', 'a', 'a', 'b'},
-      {'b', 'c', 'c', 'c', 'c', 'd', 'd', 'd', 'a', 'c'},
-      {'b', 'd', 'a', 'd', 'b', 'c', 'a', 'a', 'c', 'd'},
-      {'b', 'c', 'd', 'b', 'c', 'c', 'b', 'c', 'c', 'c'},
-      {'c', 'd', 'a', 'b', 'c', 'b', 'd', 'c', 'b', 'b'},
-      {'a', 'b', 'c', 'b', 'c', 'a', 'd', 'c', 'c', 'b'},
-      {'c', 'c', 'b', 'a', 'c', 'a', 'd', 'c', 'd', 'd'},
-      {'a', 'a', 'c', 'b', 'c', 'a', 'd', 'c', 'a', 'd'},
-      {'b', 'd', 'd', 'b', 'c', 'a', 'a', 'c', 'd', 'c'},
-      {'c', 'd', 'c', 'b', 'b', 'a', 'd', 'd', 'c', 'd'},
-      {'c', 'a', 'b', 'b', 'c', 'a', 'b', 'b', 'c', 'd'},
-      {'a', 'd', 'a', 'b', 'b', 'a', 'a', 'a', 'c', 'd'},
-      {'b', 'b', 'b', 'b', 'c', 'a', 'c', 'd', 'd', 'd'},
-      {'b', 'd', 'c', 'b', 'c', 'a', 'b', 'a', 'c', 'd'},
-      {'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'd', 'a'},
-      {'b', 'b', 'c', 'c', 'c', 'a', 'b', 'a', 'c', 'd'},
-      {'b', 'c', 'a', 'b', 'c', 'a', 'c', 'b', 'a', 'b'},
-      {'b', 'c', 'd', 'b', 'b', 'a', 'd', 'a', 'b', 'c'},
-      {'a', 'b', 'd', 'b', 'c', 'a', 'd', 'a', 'd', 'c'},
-      {'b', 'd', 'c', 'b', 'c', 'a', 'd', 'a', 'c', 'c'},
-      {'a', 'a', 'c', 'b', 'b', 'a', 'a', 'a', 'c', 'b'},
-      {'b', 'c', 'c', 'b', 'c', 'a', 'a', 'a', 'b', 'c'},
-      {'b', 'b', 'b', 'b', 'b', 'a', 'c', 'a', 'b', 'b'},
-      {'b', 'c', 'b', 'a', 'd', 'a', 'd', 'd', 'c', 'd'},
-      {'b', 'a', 'a', 'a', 'd', 'a', 'c', 'd', 'c', 'd'},
-      {'a', 'd', 'd', 'b', 'c', 'a', 'a', 'b', 'c', 'a'},
-      {'a', 'a', 'a', 'b', 'a', 'a', 'd', 'c', 'a', 'd'},
-      {'b', 'd', 'b', 'b', 'c', 'a', 'd', 'a', 'c', 'a'},
-      {'b', 'c', 'a', 'a', 'd', 'b', 'd', 'a', 'c', 'd'},
-      {'c', 'b', 'd', 'b', 'c', 'a', 'd', 'd', 'c', 'd'},
-      {'b', 'a', 'a', 'a', 'c', 'a', 'b', 'b', 'c', 'd'},
-      {'d', 'd', 'b', 'b', 'c', 'c', 'c', 'd', 'c', 'c'},
-      {'d', 'c', 'b', 'a', 'd', 'a', 'd', 'd', 'c', 'd'},
-      {'d', 'b', 'd', 'b', 'c', 'a', 'a', 'b', 'a', 'd'},
-      {'c', 'b', 'c', 'a', 'c', 'a', 'b', 'c', 'c', 'b'},
-      {'c', 'b', 'b', 'b', 'd', 'a', 'a', 'b', 'b', 'd'},
-      {'d', 'a', 'd', 'b', 'c', 'a', 'd', 'c', 'd', 'd'},
-      {'d', 'a', 'a', 'b', 'c', 'a', 'b', 'a', 'c', 'd'},
-      {'b', 'd', 'b', 'b', 'c', 'a', 'd', 'b', 'c', 'd'},
-      {'d', 'a', 'b', 'b', 'd', 'a', 'c', 'b', 'c', 'd'},
-      {'d', 'd', 'b', 'b', 'b', 'a', 'b', 'c', 'a', 'a'},
-      {'b', 'c', 'c', 'b', 'c', 'a', 'b', 'd', 'd', 'c'},
-      {'b', 'c', 'd', 'a', 'c', 'a', 'b', 'b', 'a', 'd'},
-      {'b', 'a', 'a', 'b', 'c', 'a', 'b', 'd', 'c', 'c'},
-      {'d', 'a', 'c', 'b', 'c', 'a', 'd', 'd', 'c', 'b'},
-      {'b', 'a', 'a', 'b', 'c', 'a', 'c', 'd', 'c', 'd'},
-  };
+  srand(time(NULL));
+  
+  char **provas = new char*[ALUNOS]{};
+  for (int i = 0; i < ALUNOS; i++) {
+    provas[i] = new char[QUESTOES];
+    for (int j = 0; j < QUESTOES; j++) {
+      provas[i][j] = (char)((rand() % 5) + 97);
+    }
+  }
 
-  char gabarito[QUESTOES] = {'b', 'c', 'c', 'b', 'c', 'a', 'a', 'a', 'c', 'd'};
+  char *gabarito = new char[QUESTOES]{'b', 'c', 'c', 'b', 'c', 'a', 'a', 'a', 'c', 'd'};
   distribuaNotas(provas, gabarito);
+
+  for (int i = 0; i < ALUNOS; i++) {
+   delete[] provas[i];
+  }
+  delete[] provas;
   return 0;
 }
