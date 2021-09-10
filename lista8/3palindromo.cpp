@@ -11,8 +11,7 @@ void verifiquePalindromo(char letras[][TAMANHO]) {
   for (int i = 0; i < TAMANHO; i++) {
     for (int j = i + 1; j < TAMANHO; j++) {
       cout << letras[i][j]
-           << ""
-              " === "
+           << " === "
            << letras[j][i] << endl;
       if (letras[i][j] != letras[j][i]) {
         palindromo = false;
