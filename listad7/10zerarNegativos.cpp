@@ -3,7 +3,7 @@ using namespace std;
 
 #define TAMANHO 6
 
-void zereNegativos(int matriz[][TAMANHO]) {
+void zereNegativos(int **matriz) {
   for (int i = 0; i < TAMANHO; i++) {
     for (int j = 0; j < TAMANHO; j++) {
       if (j == i || j == TAMANHO - 1 - i) {
@@ -16,7 +16,7 @@ void zereNegativos(int matriz[][TAMANHO]) {
   }
 }
 
-void imprimaMatriz(int matriz[][TAMANHO]) {
+void imprimaMatriz(int **matriz) {
   int j = 0;
 
   cout << "[" << endl;
@@ -32,14 +32,21 @@ void imprimaMatriz(int matriz[][TAMANHO]) {
 }
 
 int main() {
-  int matriz[][TAMANHO] = {
-      {17, -6, -2, -1, -7, -1}, {-1, 16, -6, -9, -2, -4},
-      {-5, -9, 11, -1, -3, -1}, {-6, -4, -3, 19, -6, -3},
-      {-8, -7, -7, -7, 12, -2}, {-4, -9, -8, -3, -7, 15},
-  };
+  int **matriz = new int *[TAMANHO] { new int[TAMANHO]{17, -6, -2, -1, -7, -1},
+                                      new int[TAMANHO]{-1, 16, -6, -9, -2, -4},
+                                      new int[TAMANHO]{-5, -9, 11, -1, -3, -1},
+                                      new int[TAMANHO]{-6, -4, -3, 19, -6, -3},
+                                      new int[TAMANHO]{-8, -7, -7, -7, 12, -2},
+                                      new int[TAMANHO]{-4, -9, -8, -3, -7, 15},
+                                    };
 
   imprimaMatriz(matriz);
   zereNegativos(matriz);
   imprimaMatriz(matriz);
+
+  for (int i = 0; i < TAMANHO; i++) {
+    delete[] matriz[i];
+  }
+  delete[] matriz;
   return 0;
 }

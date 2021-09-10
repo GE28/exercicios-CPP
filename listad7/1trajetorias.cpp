@@ -14,8 +14,10 @@ void analiseVetor(int vetor[]) {
 }
 
 int main() {
-  int vetor[] = {5, 7, 6, 9, 2, 8, 4, 0, 3};
+  int *vetor = new int[9]{5, 7, 6, 9, 2, 8, 4, 0, 3};
 
   analiseVetor(vetor);
+
+  delete[] vetor;
   return 0;
 }

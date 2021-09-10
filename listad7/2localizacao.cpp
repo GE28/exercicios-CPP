@@ -3,8 +3,18 @@ using namespace std;
 
 #define TAMANHO 10
 
-void encontreMaximo(int matriz[][TAMANHO]) {
+void encontreMaximo(int **matriz) {
   int maximo = matriz[0][0], x = 1, y = 1;
+
+  for (int i = 0; i < TAMANHO; i++) {
+    for (int j = 0; j < TAMANHO; j++) {
+      if (matriz[i][j] > maximo) {
+        maximo = matriz[i][j];
+        x = j;
+        y = i;
+      }
+    }
+  }
   for (int i = 0; i < TAMANHO; i++) {
     for (int j = 0; j < TAMANHO; j++) {
       if (matriz[i][j] > maximo) {
@@ -22,16 +32,18 @@ void encontreMaximo(int matriz[][TAMANHO]) {
 }
 
 int main() {
-  int matriz[][TAMANHO] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                           {2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
-                           {3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
-                           {4, 5, 6, 7, 8, 9, 10, 11, 12, 13},
-                           {5, 6, 7, 8, 9, 10, 11, 12, 31, 14},
-                           {6, 7, 8, 9, 10, 11, 12, 13, 14, 15},
-                           {7, 8, 9, 10, 11, 12, 13, 14, 15, 16},
-                           {8, 9, 10, 11, 12, 13, 14, 15, 16, 17},
-                           {9, 10, 11, 12, 13, 14, 15, 16, 17, 18},
-                           {10, 11, 12, 13, 14, 15, 16, 17, 18, 19}};
+  int **matriz = new int *[TAMANHO];
+  for (int i = 0; i < TAMANHO; i++) {
+    int v = 1 + i;
+    matriz[i] =
+        new int[TAMANHO]{v++, v++, v++, v++, v++, v++, v++, v++, v++, v};
+  }
+
   encontreMaximo(matriz);
+
+  for (int i = 0; i < TAMANHO; i++) {
+    delete[] matriz[i];
+  }
+  delete[] matriz;
   return 0;
 }

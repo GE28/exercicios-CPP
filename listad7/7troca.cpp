@@ -3,15 +3,16 @@ using namespace std;
 
 #define TAMANHO 4
 
-void troqueDirecao(int matriz[][TAMANHO]) {
-  for (int i = 0; i < TAMANHO; i++) {
-    int valorOriginal = matriz[i][3];
-    matriz[i][3] = matriz[3][i];
-    matriz[3][i] = valorOriginal;
+void troqueDirecao(int **matriz) {
+  for (int i = 0; i < TAMANHO - 1; i++) {
+    int ultimo = TAMANHO - 1;
+    int valorOriginal = matriz[i][ultimo];
+    matriz[i][ultimo] = matriz[ultimo][i];
+    matriz[ultimo][i] = valorOriginal;
   }
 }
 
-void imprimaMatriz(int matriz[][TAMANHO]) {
+void imprimaMatriz(int **matriz) {
   int j = 0;
 
   cout << "[" << endl;
@@ -27,11 +28,19 @@ void imprimaMatriz(int matriz[][TAMANHO]) {
 }
 
 int main() {
-  int matriz[][TAMANHO] = {
-      {13, 14, 15, 16}, {9, 10, 11, 12}, {5, 6, 7, 8}, {1, 2, 3, 4}};
+  int **matriz = new int *[TAMANHO];
+  matriz[0] = new int[TAMANHO]{13, 14, 15, 16};
+  matriz[1] = new int[TAMANHO]{9, 10, 11, 12};
+  matriz[2] = new int[TAMANHO]{5, 6, 7, 8};
+  matriz[3] = new int[TAMANHO]{1, 2, 3, 4};
 
   imprimaMatriz(matriz);
   troqueDirecao(matriz);
   imprimaMatriz(matriz);
+
+  for (int i = 0; i < TAMANHO; i++) {
+    delete[] matriz[i];
+  }
+  delete[] matriz;
   return 0;
 }

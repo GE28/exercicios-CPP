@@ -3,13 +3,13 @@ using namespace std;
 
 #define TAMANHO 5
 
-void preenchaDiagonal(int matriz[][TAMANHO]) {
+void preenchaDiagonal(int **matriz) {
   for (int i = 0; i < TAMANHO; i++) {
     matriz[i][i] = 1;
   }
 }
 
-void imprimaMatriz(int matriz[][TAMANHO]) {
+void imprimaMatriz(int **matriz) {
   int j = 0;
 
   cout << "[" << endl;
@@ -25,9 +25,17 @@ void imprimaMatriz(int matriz[][TAMANHO]) {
 }
 
 int main() {
-  int matriz[][TAMANHO] = {{}, {}, {}, {}, {}};
+  int **matriz = new int *[TAMANHO];
+  for (int i = 0; i < TAMANHO; i++) {
+    matriz[i] = new int[TAMANHO]{};
+  }
+
   preenchaDiagonal(matriz);
   imprimaMatriz(matriz);
 
+  for (int i = 0; i < TAMANHO; i++) {
+    matriz[i] = new int[TAMANHO]{};
+  }
+  delete[] matriz;
   return 0;
 }
