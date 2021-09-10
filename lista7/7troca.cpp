@@ -4,10 +4,11 @@ using namespace std;
 #define TAMANHO 4
 
 void troqueDirecao(int matriz[][TAMANHO]) {
-  for (int i = 0; i < TAMANHO; i++) {
-    int valorOriginal = matriz[i][3];
-    matriz[i][3] = matriz[3][i];
-    matriz[3][i] = valorOriginal;
+  for (int i = 0; i < TAMANHO - 1; i++) {
+    int ultimo = TAMANHO - 1;
+    int valorOriginal = matriz[i][ultimo];
+    matriz[i][ultimo] = matriz[ultimo][i];
+    matriz[ultimo][i] = valorOriginal;
   }
 }
 
