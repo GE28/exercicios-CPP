@@ -1,0 +1,91 @@
+// PROGRAMA 1
+// Esse primeiro programa não compila, v_abs não foi declarado em
+// abs. Ele deveria exibir o valor absoluto de um número, no caso -3.0. E
+// abs(-3) retornaria +3.0, ou simplesmente 3
+#include <iostream>
+using namespace std;
+
+double abs(double x) {
+  if (x < 0)
+    v_abs = -x; // Erro de compilação: v_abs não foi declarado em abs
+  else
+    v_abs = x;
+
+  return v_abs;
+}
+
+int main() {
+  double v_abs;
+
+  v_abs = abs(-3);
+  cout << v_abs << endl;
+
+  return 0;
+}
+
+// PROGRAMA 2
+// Esse programa também não compila, v_abs não foi declarado na
+// função main. Ele deveria fazer o mesmo que o programa anterior
+#include <iostream>
+using namespace std;
+
+double abs(doublex) {
+  double v_abs;
+
+  if (x < 0)
+    v_abs = −x;
+  else
+    v_abs = x;
+
+  return v_abs;
+}
+
+int main() {
+  abs(−3);
+  cout << v_abs << endl; // Erro de compilação: v_abs não foi declarado em main
+  return 0;
+}
+
+// PROGRAMA 3
+// Esse programa deveria trocar os valores x e y, mas não faz isso já que a
+// função troca não retorna nada, nem manipula endereções de memória. Os valores
+// manipulados dentro da função são apenas cópias dos originais
+#include <iostream>
+using namespace std;
+
+void troca(int x, int y) {
+  int aux;
+  aux = x;
+  x = y;
+  y = aux; // Os valores x e y manipulados aqui são cópias não relacionadas com
+           // os originais. Para realizar alguma manipulação diretamente,
+           // ponteiros deveriam ser passados no lugar.
+}
+
+int main() {
+  int a, b;
+  cin >> a >> b;
+  troca(a, b);
+  cout << "a = " << a << endl;
+  cout << "b = " << b << endl;
+  return 0;
+}
+
+// PROGRAMA 4
+// Finalmente um programa funcional! Ele exibe o dobro de a no console, mas o
+// valor original permanece inalterado
+#include <iostream>
+using namespace std;
+
+void dobro(int x) {
+  x = 2 * x;
+  cout << x << endl;
+}
+
+int main() {
+  int a;
+  cin >> a;
+  dobro(a);
+  cout << "a = " << a << endl;
+  return 0;
+}
