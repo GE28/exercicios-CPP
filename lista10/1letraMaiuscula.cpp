@@ -1,7 +1,6 @@
+#include "lista10.h"
 #include <iostream>
 using namespace std;
-
-void teclaShift(char *letra) { (*letra) -= 32; }
 
 int main() {
   char letraA = 'a';

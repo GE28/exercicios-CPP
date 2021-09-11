@@ -1,14 +1,8 @@
+#include "lista10.h"
 #include <iostream>
 using namespace std;
 
 typedef unsigned long long ull;
-
-void somarQuadrados(int n, ull *soma) {
-  if (n > 0) {
-    *soma += n * n;
-    somarQuadrados(n - 1, soma);
-  }
-}
 
 int main() {
   ull resultado = 0;
