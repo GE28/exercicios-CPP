@@ -1,51 +1,28 @@
+#include "lista9.h"
 #include <iostream>
 using namespace std;
 
 typedef unsigned int uint;
 
-bool divisivel(uint a, uint b) { return a % b == 0; }
-
-bool primo(uint n) {
-  uint metade = n >> 1;
-  for (uint i = metade; i > 1; i--) {
-    if (divisivel(n, i)) {
-      return false;
-    }
-  }
-
-  return true;
+void divisibilidade(uint x, uint y) {
+  cout << x;
+  if (!divisivel(x, y))
+    cout << " não";
+  cout << " é divisível por " << y;
+  cout << endl;
 }
 
-uint fat(uint n) {
-  uint resultado = 1;
-  uint i = 2;
-
-  while (i <= n) {
-    resultado = resultado * i;
-    i++;
-  }
-
-  return resultado;
-}
-
-void comb(uint x, uint y) {
-  uint resultado = 1;
-
+void combinacao(uint x, uint y) {
   if (y > x) {
     uint tmp = x;
     x = y;
     y = tmp;
   }
 
-  int fatN, fatP, fatNP;
-  fatN = fat(x);
-  fatP = fat(y);
-  fatNP = fat(x - y);
+  uint resultado = comb(x, y);
 
-  resultado = (fatN / (fatNP * fatP));
-
-  cout << "A combinação de " << x << " elementos " << y << " à " << y << " = "
-       << resultado << endl;
+  cout << "A combinação de " << x << " elementos tomados " << y << " à " << y
+       << " = " << resultado << endl;
 }
 
 void primaridade(uint n) {
@@ -74,13 +51,7 @@ int main() {
   primaridade(entrada2);
   cout << "O fatorial de " << entrada2 << " é " << fat(entrada2) << endl;
 
-  comb(entrada1, entrada2);
-
-  cout << entrada1;
-  if (!divisivel(entrada1, entrada2))
-    cout << " não";
-  cout << " é divisível por " << entrada2;
-
-  cout << endl;
+  combinacao(entrada1, entrada2);
+  divisibilidade(entrada1, entrada2);
   return 0;
 }
