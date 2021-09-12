@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int obterFatorial(int n) {
+int fat(int n) {
   int resultado = 1;
   int i = 2;
 
@@ -16,9 +16,9 @@ int obterFatorial(int n) {
 int comb(int n, int p) {
   if (p < n) {
     int fatN, fatP, fatNP;
-    fatN = obterFatorial(n);
-    fatP = obterFatorial(p);
-    fatNP = obterFatorial((n - p));
+    fatN = fat(n);
+    fatP = fat(p);
+    fatNP = fat((n - p));
 
     return (fatN / (fatNP * fatP));
   }
@@ -27,17 +27,17 @@ int comb(int n, int p) {
 }
 
 int main() {
-  int n, p, fat;
+  int n, p, fatorial;
   cout << "Digite o número de elementos: " << endl;
   cin >> n;
 
   cout << "Digite o número de posições: " << endl;
   cin >> p;
 
-  fat = comb(n, p);
-  if (fat > 0) {
+  fatorial = comb(n, p);
+  if (fatorial > 0) {
     cout << "A combinação de " << n << " elementos " << p << " à " << p << " = "
-         << fat;
+         << fatorial;
   } else {
     cout << "O número de posições não pode ser maior que o número de elementos";
   }
